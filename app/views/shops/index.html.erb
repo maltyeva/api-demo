@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Address cn</th>
+      <th>Description</th>
+      <th>Description cn</th>
+      <th>Image url</th>
+      <th>Open time</th>
+      <th>Close time</th>
+      <th>Phone</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shops.each do |shop| %>
+      <tr>
+        <td><%= shop.name %></td>
+        <td><%= shop.address %></td>
+        <td><%= shop.address_cn %></td>
+        <td><%= shop.description %></td>
+        <td><%= shop.description_cn %></td>
+        <td><%= shop.image_url %></td>
+        <td><%= shop.open_time %></td>
+        <td><%= shop.close_time %></td>
+        <td><%= shop.phone %></td>
+        <td><%= shop.category %></td>
+        <td><%= link_to 'Show', shop %></td>
+        <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
+        <td><%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shop', new_shop_path %>
