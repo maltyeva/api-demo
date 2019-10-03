@@ -12,6 +12,28 @@ class ShopsController < ApplicationController
   def show
   end
 
+  def liked
+    @shop = Shop.find(params[:id])
+    @shop.liked = true
+    @shop.save!
+        respond_to do |format|
+
+    format.json { render :show, status: :created, location: @shop }
+end
+  end
+
+
+   def disliked
+    @shop = Shop.find(params[:id])
+    @shop.liked = false
+    @shop.save!
+        respond_to do |format|
+
+    format.json { render :show, status: :created, location: @shop }
+end
+  end
+
+
   # GET /shops/new
   def new
     @shop = Shop.new
