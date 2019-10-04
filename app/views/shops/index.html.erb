@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Shops</h1>
-
 <table>
   <thead>
     <tr>
@@ -10,7 +8,6 @@
       <th>Address cn</th>
       <th>Description</th>
       <th>Description cn</th>
-      <th>Image url</th>
       <th>Open time</th>
       <th>Close time</th>
       <th>Phone</th>
@@ -18,7 +15,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @shops.each do |shop| %>
       <tr>
@@ -27,7 +23,6 @@
         <td><%= shop.address_cn %></td>
         <td><%= shop.description %></td>
         <td><%= shop.description_cn %></td>
-        <td><%= shop.image_url %></td>
         <td><%= shop.open_time %></td>
         <td><%= shop.close_time %></td>
         <td><%= shop.phone %></td>
@@ -39,7 +34,5 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Shop', new_shop_path %>

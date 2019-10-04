@@ -4,7 +4,11 @@ class ShopsController < ApplicationController
   # GET /shops
   # GET /shops.json
   def index
+    if params[:query]
+      @shops = Shop.global_search(params[:query])
+    else
     @shops = Shop.all
+  end
   end
 
   # GET /shops/1
