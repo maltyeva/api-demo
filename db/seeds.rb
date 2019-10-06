@@ -10,7 +10,9 @@ true 'home away from home' feel. The shop also offers Pawsome fresh pet food for
   open_time: "11:30", 
   close_time: "22:30", 
   phone: 13818782405, 
-  category: "restaurant"
+  category: "restaurant", 
+  latitude: 31.228573,
+  longitude: 121.443060
   )
 
 Shop.create!(name: "Charlie's 粉红汉堡", 
@@ -22,7 +24,9 @@ Shop.create!(name: "Charlie's 粉红汉堡",
   open_time: "11:00", 
   close_time: "23:00", 
   phone: 2154038513, 
-  category: "restaurant"
+  category: "restaurant",
+  latitude: 31.216844, 
+  longitude: 121.447953
   )
 
 Shop.create!(name: "Dodu", 
@@ -34,5 +38,7 @@ Shop.create!(name: "Dodu",
   open_time: "11:00", 
   close_time: "22:00", 
   phone: 2164315176, 
-  category: "restaurant"
+  category: "restaurant",
+  latitude: 31.217147,
+  longitude: 121.447862
   )
